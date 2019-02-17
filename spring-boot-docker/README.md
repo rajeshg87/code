@@ -4,7 +4,7 @@ docker build -t docker-spring-boot .
 
 DOCKER RUN IMAGE
 
-docker run -p 8085:8085 docker-spring-boot
+docker run --name rajesh-sample -p 8085:8085 docker-spring-boot
 
 DOCKER TAG IMAGE
 
