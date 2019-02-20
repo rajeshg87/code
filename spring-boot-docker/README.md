@@ -21,11 +21,12 @@ minikube delete
 minikube --memory 8192 --cpus 2 start
 
 minikube ip
-kubectl run mykubernetes-springboot --image=rajeshg87/spring-sample:spring-boot-hello --port=8085
-kubectl expose deployment mykubernetes-springboot --name=myapp --port=80 --target-port=8085 --type=LoadBalancer 
+sudo kubectl run myapp --image=rajeshg87/spring-sample:spring-boot-hello --port=8085
+sudo kubectl expose deployment/myapp --type="LoadBalancer" --port=8085
 
-kubectl get deployment
+kubectl get deployments
 kubectl get service
-kubectl delete service myapp
-kubectl describe services/myapplb
-kubectl get svc myapplb
+
+kubectl describe services/myapp
+sudo kubectl scale --replicas=2 deployment/myapp
+kubectl get pods
