@@ -1,0 +1,16 @@
+server:
+  port: 0
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8180/auth/realms/developer
+          jwk-set-uri: http://localhost:8180/auth/realms/developer/protocol/openid-connect/certs
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${instanceId:${random.value}}
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/

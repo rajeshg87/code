@@ -1,0 +1,19 @@
+server:
+  port: 8082
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: users-status-check
+          uri: lb://resource-server
+          predicates:
+            - Path=/users,/users/status/{name}
+            - Method=GET
+          filters:
+            - RemoveRequestHeader=Cookie
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
