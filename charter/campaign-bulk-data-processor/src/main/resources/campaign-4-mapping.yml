@@ -1,0 +1,27 @@
+outputDataDir: /Users/rajeshg87/code/charter/campaign-4/output/
+outputFileDataSpliter: "|"
+sql: "SELECT ACCOUNT_NUMBER, DIVISION_ID, CUSTOMER_TYPE, PHONE_NUMBER, EMAIL,SMS_NUMBER,
+     IVR_NUMBER, ADDRESS_1, ADDRESS_2, CITY, STATE, ZIP, NAME, DUE_DATE, LST_STMT_BAL, E_BILL
+     FROM CUSTOMER_BILL_DATA"
+campaignDatasource:
+  driver: org.postgresql.Driver
+  url: jdbc:postgresql://localhost:5433/rajesh
+  username: postgres
+  password: rajesh
+fieldMapper:
+  - {outputPosition: 1, valueName: ACCOUNT_NUMBER, displayName: BILLER_ACCOUNT_NUMBER, dataPosition: 0, parameterValue: False}
+  - {outputPosition: 2, valueName: DIVISION_ID, displayName: SPC_DIVISION_ID, dataPosition: 1, parameterValue: False}
+  - {outputPosition: 3, valueName: CUSTOMER_TYPE, displayName: CUSTOMER_TYPE, dataPosition: 2, parameterValue: False}
+  - {outputPosition: 4, valueName: PHONE_NUMBER, displayName: CUSTOMER_NUMBER, dataPosition: 3, parameterValue: False}
+  - {outputPosition: 5, valueName: EMAIL, displayName: EMAIL_ADDRESS, dataPosition: 4, parameterValue: False}
+  - {outputPosition: 6, valueName: SMS_NUMBER, displayName: SMS_PHONE_NUMBER, dataPosition: 5, parameterValue: False}
+  - {outputPosition: 7, valueName: IVR_NUMBER, displayName: IVR_PHONE_NUMBER, dataPosition: 6, parameterValue: False}
+  - {outputPosition: 8, valueName: ADDRESS_1, displayName: ADDRESS_LINE1, dataPosition: 7, parameterValue: False}
+  - {outputPosition: 9, valueName: ADDRESS_2, displayName: ADDRESS_LINE2, dataPosition: 8, parameterValue: False}
+  - {outputPosition: 10, valueName: CITY, displayName: CITY, dataPosition: 9, parameterValue: False}
+  - {outputPosition: 11, valueName: STATE, displayName: STATE, dataPosition: 10, parameterValue: False}
+  - {outputPosition: 12, valueName: ZIP, displayName: ZIP, dataPosition: 11, parameterValue: False}
+  - {outputPosition: 13, valueName: NAME, displayName: CUSTOMER_NAME, dataPosition: 12, parameterValue: True}
+  - {outputPosition: 14, valueName: DUE_DATE, displayName: DUE_DATE, dataPosition: 13, parameterValue: True}
+  - {outputPosition: 15, valueName: LST_STMT_BAL, displayName: LST_STMT_BAL_SBB, dataPosition: 14, parameterValue: True}
+  - {outputPosition: 16, valueName: E_BILL, displayName: E_BILL_SBB, dataPosition: 15, parameterValue: True}
