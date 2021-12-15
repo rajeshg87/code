@@ -1,0 +1,20 @@
+inputFileDataSpliter: "|"
+outputDataDir: /Users/rajeshg87/code/charter/campaign-2/output/
+outputFileDataSpliter: "|"
+fieldMapper:
+  - {outputPosition: 1, valueName: Account Number, displayName: BILLER_ACCOUNT_NUMBER, dataPosition: 0, parameterValue: False}
+  - {outputPosition: 2, valueName: Division, displayName: SPC_DIVISION_ID, dataPosition: 2, parameterValue: False}
+  - {outputPosition: 3, valueName: Type, displayName: CUSTOMER_TYPE, dataPosition: 3, parameterValue: False}
+  - {outputPosition: 4, valueName: Mobile, displayName: CUSTOMER_NUMBER, dataPosition: 4, parameterValue: False}
+  - {outputPosition: 5, valueName: Email, displayName: EMAIL_ADDRESS, dataPosition: 5, parameterValue: False}
+  - {outputPosition: 6, valueName: Sms Number, displayName: SMS_PHONE_NUMBER, dataPosition: 6, parameterValue: False}
+  - {outputPosition: 7, valueName: Ivr Number, displayName: IVR_PHONE_NUMBER, dataPosition: 7, parameterValue: False}
+  - {outputPosition: 8, valueName: Addr Line 1, displayName: ADDRESS_LINE1, dataPosition: 8, parameterValue: False}
+  - {outputPosition: 9, valueName: Addr Line 2, displayName: ADDRESS_LINE2, dataPosition: 9, parameterValue: False}
+  - {outputPosition: 10, valueName: City, displayName: CITY, dataPosition: 10, parameterValue: False}
+  - {outputPosition: 11, valueName: State, displayName: STATE, dataPosition: 11, parameterValue: False}
+  - {outputPosition: 12, valueName: Zip, displayName: ZIP, dataPosition: 12, parameterValue: False}
+  - {outputPosition: 13, valueName: Customer Name, displayName: CUSTOMER_NAME, dataPosition: 1, parameterValue: True}
+  - {outputPosition: 14, valueName: Due, displayName: DUE_DATE, dataPosition: 13, parameterValue: True}
+  - {outputPosition: 15, valueName: Statment, displayName: LST_STMT_BAL_SBB, dataPosition: 14, parameterValue: True}
+  - {outputPosition: 16, valueName: Online Subscription, displayName: E_BILL_SBB, dataPosition: 15, parameterValue: True}

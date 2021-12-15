@@ -1,0 +1,21 @@
+- name: CAMPAIGN_1
+  mapping: campaign-1-mapping.yml
+  trigger: watcher
+  sourceDirectory: "/Users/rajeshg87/code/charter/campaign-1/input/"
+
+- name: CAMPAIGN_2
+  mapping: campaign-2-mapping.yml
+  trigger: cron
+  cron: "0 */1 * * * *"
+  sourceDirectory: "/Users/rajeshg87/code/charter/campaign-2/input/"
+
+- name: CAMPAIGN_3
+  mapping: campaign-3-mapping.yml
+  trigger: cron
+  cron: "0 */2 * * * *"
+  sourceDirectory: "/Users/rajeshg87/code/charter/campaign-3/input/"
+
+- name: CAMPAIGN_4
+  mapping: campaign-4-mapping.yml
+  trigger: cron
+  cron: "0 */3 * * * *"
